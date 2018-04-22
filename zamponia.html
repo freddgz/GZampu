@@ -1,0 +1,152 @@
+<!DOCTYPE hmtl>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  
+  <title>GZampu | Zampoña online</title>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/freddgz/gzampu/3cb08c30/gzampu-main.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/freddgz/gzampu/3cb08c30/gzampu-component.css">
+  <!--<link rel="stylesheet" href="materialize.css">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+<link rel="stylesheet"  href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div id="ispc"></div>
+<header>
+<!--
+  <ul id="dropdown1" class="dropdown-content">
+      <li><a onclick="loadPagefromView(0)">Mi menor</a></li>
+      <li><a onclick="loadPagefromView(1)">Re menor</a></li>
+      <li><a onclick="loadPagefromView(2)">Si menor</a></li>
+      <li><a onclick="loadPagefromView(3)">Fa# menor</a></li>
+      <li><a onclick="loadPagefromView(4)">La menor</a></li>
+    </ul>
+    <div class="navbar-fixed">
+      <nav class="z-depth-1">
+        <div class="nav-wrapper #ffa000 amber darken-1 ">
+          <a href="#!" class="brand-logo">GZampu</a>
+         
+          <ul id="nav-mobile" class="right hide-on-med-and-down amber-text text-darken-1">
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Zampoña<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+
+          <ul id="mobile-demo" class="side-nav">
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header  waves-effect waves-orange">Zampoña<i class="material-icons right">arrow_drop_down</i></a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a onclick="loadPagefromView(0)">Mi menor</a></li>
+                      <li><a onclick="loadPagefromView(1)">Re menor</a></li>
+                      <li><a onclick="loadPagefromView(2)">Si menor</a></li>
+                      <li><a onclick="loadPagefromView(3)">Fa# menor</a></li>
+                      <li><a onclick="loadPagefromView(4)">La menor</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>       
+          </ul>
+           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons right">menu</i></a>
+        </div>
+      </nav>
+    </div>
+-->
+</header>
+
+<main>
+  <div class="container">
+    <div class="row">
+        <div id="pipe">
+          <div class="title center">            
+            <a id="btn-title" class='dropdown-button waves-effect waves-teal btn-flat btn-lg' href='#' data-activates='dropdown1'>NOTA</a>
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a onclick="loadPagefromView(0)">Mi menor</a></li>
+              <li><a onclick="loadPagefromView(1)">Re menor</a></li>
+              <li><a onclick="loadPagefromView(2)">Si menor</a></li>
+              <li><a onclick="loadPagefromView(3)">Fa# menor</a></li>
+              <li><a onclick="loadPagefromView(4)">La menor</a></li>
+            </ul>
+          </div>
+          <div class="content clearfix flow-text">
+            <div class="box arca"></div>
+            <div class="box ira"></div>
+          </div>
+        </div>
+        <div class="row center title">
+          
+
+<h4 id="lblCancion" onclick="setCancion(this)">cancion</h4>          
+          <div class="center" style="display: inline-block !important">
+<img id="Foto" onclick="setSRC(this)" class="circle"  width="60" height="60" />
+          <p id="lblArtista" onclick="setArtista(this)" class="right"> artista</p>
+          </div>
+          
+          
+        </div>
+        <div class="switch center">
+          <label>
+            <input type="checkbox" id="switchNotas">
+            <span class="lever"></span>
+            Leer notas musicales
+          </label>
+           <label>
+            <input type="checkbox" id="switchNumero">
+            <span class="lever"></span>
+            Notas númericas
+          </label>
+        </div>
+      </div>
+    </div>
+    <div id="notas-letras" class="center flow-text grey darken-3">
+    <div class="fixed-action-btn horizontal">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating red" id="fab-clear"><i class="material-icons">fast_rewind</i></a></li>
+        <li><a class="btn-floating green" id="fab-back"><i class="material-icons">skip_previous</i></a></li>
+        <li><a class="btn-floating purple" id="fab-breakline"><i class="material-icons">trending_down</i></a></li>
+        <li><a class="btn-floating blue" id="fab-space"><i class="material-icons">trending_flat</i></a></li>
+
+      </ul>
+    </div>
+
+
+  </div>
+</main>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="https://cdn.rawgit.com/freddgz/gzampu/3cb08c30/gzampu-main.js"></script>
+<!--<script src="main.js"></script>-->
+<!--<script src="zamponia.js"></script>-->
+<script src="https://cdn.rawgit.com/freddgz/gzampu/2ada2fa1/gzampu-zamponia.js"></script>
+<script src="https://tonejs.github.io/build/Tone.min.js"></script>
+<script>
+  var gindex=0
+  if (localStorage.getItem('_index')!=null)
+    gindex=localStorage.getItem('_index');
+  if (localStorage.getItem('_foto')!=null)
+    document.getElementById('Foto').src=localStorage.getItem('_foto');
+  if (localStorage.getItem('_cancion')!=null)
+    document.getElementById('lblCancion').textContent= localStorage.getItem('_cancion');
+  if (localStorage.getItem('_artista')!=null)
+    document.getElementById('lblArtista').textContent=localStorage.getItem('_artista');
+  
+  document.getElementById('switchNotas').checked=true;
+  document.getElementById('switchNumero').checked=false;
+  $(document).ready(function(){    
+    //var nombre=prompt("nombre de la cancion","nombre");
+    //$('.title h2').text(nombre);
+    
+  });
+
+</script>
+</body>
+</html>
+
