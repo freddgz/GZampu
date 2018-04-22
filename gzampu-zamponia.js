@@ -133,7 +133,7 @@ $(document).ready(function(){
 				+nota+'</button>';
 	};
 	function mostrarZamponia(index){
-		$('#pipe .title').append("<h5>"+_titulo[index]+"</h5>");
+		$('#btn-title').text(_titulo[index]);
 		$('#pipe .title').append("<h6>"+_tonalidad[index]+"</h6>");		
 		$('.box.arca').html(_arcas[index]);
 		$('.box.ira').html(_iras[index]);
