@@ -1,0 +1,182 @@
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+/* Content */
+
+#pipe{
+	/*border: 1px #000 solid;*/
+}
+.content {
+	/*padding: 2em 0;*/
+}
+.title {
+	color: rgb(22, 35, 47);
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 1.1em;
+	/*margin-bottom: 1.5em;*/
+}
+
+.pipe.title span {
+	display: block;
+	letter-spacing: 0;
+	font-size: 75%;
+	/*padding-top: 1em;*/
+}
+.box {
+	padding: 0em;
+	/*min-height: 240px;*/
+	text-align: center;
+}
+
+.box.arca {
+
+}
+.box.ira {
+
+}
+
+.cbutton {
+	height: 50px;
+	width: 50px;
+	
+	position: relative;
+	display: inline-block;
+	margin: 0em;
+	padding: 0;
+	border: none;
+	/*background: none;
+	font-size: 1.4em;*/
+	color: #FFF;
+	overflow: visible;
+	-webkit-transition: color 0.7s;
+	transition: color 0.7s;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  background-color: #FF9900;
+  border-radius: 50%;
+  transition: .3s;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.cbutton.cbutton--click,
+.cbutton:focus {
+	outline: none;
+	/*color: #3c8ddc;*/
+	background-color: #FFB800;
+}
+
+.cbutton::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -35px 0 0 -35px;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	pointer-events: none;
+}
+
+
+
+/* Individual Effects */
+
+/* Ivana */
+.cbutton--effect-ivana::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -35px 0 0 -35px;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	pointer-events: none;
+}
+
+.cbutton--effect-ivana::before,
+.cbutton--effect-ivana::after {
+	box-shadow: 0 0 0 2px rgba(255,179,0,0.5);
+}
+
+.cbutton--effect-ivana.cbutton--click::before {
+	-webkit-animation: anim-effect-ivana-1 0.5s forwards;
+	animation: anim-effect-ivana-1 0.5s forwards;
+}
+
+.cbutton--effect-ivana.cbutton--click::after {
+	-webkit-animation: anim-effect-ivana-2 0.5s forwards;
+	animation: anim-effect-ivana-2 0.5s forwards;
+}
+
+@-webkit-keyframes anim-effect-ivana-1 {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		-moz-transform: scale3d(0.5, 0.5, 1);
+		-o-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale3d(1.1, 1.1, 1);
+		-moz-transform: scale3d(1.1, 1.1, 1);
+		-o-transform: scale3d(1.1, 1.1, 1);
+		transform: scale3d(1.1, 1.1, 1);
+	}
+}
+
+@keyframes anim-effect-ivana-1 {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		-moz-transform: scale3d(0.5, 0.5, 1);
+		-o-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale3d(1.1, 1.1, 1);
+		-moz-transform: scale3d(1.1, 1.1, 1);
+		-o-transform: scale3d(1.1, 1.1, 1);
+		transform: scale3d(1.1, 1.1, 1);
+	}
+}
+
+@-webkit-keyframes anim-effect-ivana-2 {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		-moz-transform: scale3d(0.5, 0.5, 1);
+		-o-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	50%, 100% {
+		opacity: 0;
+		-webkit-transform: scale3d(1.2, 1.2, 1);
+		-moz-transform: scale3d(1.2, 1.2, 1);
+		-o-transform: scale3d(1.2, 1.2, 1);
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}
+
+@keyframes anim-effect-ivana-2 {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		-moz-transform: scale3d(0.5, 0.5, 1);
+		-o-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	50%, 100% {
+		opacity: 0;
+		-webkit-transform: scale3d(1.2, 1.2, 1);
+		-moz-transform: scale3d(1.2, 1.2, 1);
+		-o-transform: scale3d(1.2, 1.2, 1);
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}
