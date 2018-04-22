@@ -6,6 +6,7 @@ $(document).ready(function(){
 	    }
 	  ); 
 	$(".dropdown-button").dropdown();
+	$('.dropdown-trigger').dropdown();
 	$('.tooltipped').tooltip({delay: 10});
 	$('select').material_select();
 	$('.modal-trigger').leanModal();
