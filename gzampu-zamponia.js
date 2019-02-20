@@ -210,8 +210,9 @@ $(document).ready(function(){
 		}
 		AmericanNote=changeNoteFormat(note);
 		//synth.triggerAttackRelease(AmericanNote+escala, '8n')
-		synth.triggerAttack(AmericanNote+escala);
-
+		Tone.context.resume().then(() => {
+			synth.triggerAttack(AmericanNote+escala);
+		}
 		$(tagbtn).addClass("bordado");
 		updateScroll();
 		//$(tagbtn).delay(1000).queue(function(){
