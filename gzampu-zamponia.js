@@ -212,7 +212,7 @@ $(document).ready(function(){
 		//synth.triggerAttackRelease(AmericanNote+escala, '8n')
 		Tone.context.resume().then(() => {
 			synth.triggerAttack(AmericanNote+escala);
-		}
+		});
 		$(tagbtn).addClass("bordado");
 		updateScroll();
 		//$(tagbtn).delay(1000).queue(function(){
